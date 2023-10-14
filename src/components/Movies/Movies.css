@@ -1,0 +1,12 @@
+.movies {
+  width: 1280px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1010px) {
+  .movies {
+    width: 100%;
+  }
+}

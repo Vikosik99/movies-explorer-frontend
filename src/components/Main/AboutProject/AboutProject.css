@@ -1,0 +1,176 @@
+.aboutProject {
+  background-color: #202020;
+  width: 1280px;
+  height: 608px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 70px 110px;
+}
+
+
+.aboutProject__glava {
+  font-family: Inter;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: #FFFFFF;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #DADADA;
+
+}
+
+.aboutProject__text {
+  display: grid;
+  gap: 26px 40px;
+  grid-template-columns: repeat(2, 1fr);
+  color: #FFFFFF;
+  margin-top: 70px;
+}
+
+.aboutProject__text__diplon {
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.04em;
+  text-align: left;
+
+}
+
+.aboutProject__text__about {
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.aboutProject__shkala {
+  display: flex;
+  gap: 14px 0px;
+  /* grid-template-columns: repeat(2, 1fr); */
+  margin: 0;
+  margin-top: 110px;
+  padding: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+.aboutProject__conteiner {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.aboutProject__shkala__block {
+  width: 20%;
+  height: 36px;
+  background-color: #3DDC84;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.aboutProject__shkala__text {
+  width: 20%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #8B8B8B;
+}
+
+.aboutProject__shkala__block_ac {
+  width: 80%;
+  color: #FFFFFF;
+  background-color: #303030;
+}
+
+.aboutProject__shkala__text_ac {
+  width: 80%;
+}
+
+/*1180px*/
+
+@media screen and (max-width: 1180px) {
+  .aboutProject {
+    padding: 50px 90px;
+    width: 100%;
+  }
+}
+
+/*728px*/
+
+@media screen and (max-width: 728px) {
+  .aboutProject {
+    padding: 70px 18px 69px;
+    width: 100%;
+    height: auto;
+  }
+
+  .aboutProject__text {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0;
+    row-gap: 16px;
+  }
+
+  .aboutProject__glava {
+    font-size: 18px;
+  }
+
+  .aboutProject__text__diplon {
+    font-size: 18px;
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  .aboutProject__text__about {
+    font-size: 11px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .aboutProject__shkala__block {
+    font-size: 11px;
+  }
+
+  .aboutProject__shkala__text {
+    line-height: 11px;
+  }
+
+  .aboutProject__text__diplon_2 {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    margin-top: 40px;
+  }
+
+  .aboutProject__text__about_2 {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+
+  .aboutProject__shkala {
+    margin-top: 40px;
+  }
+}
