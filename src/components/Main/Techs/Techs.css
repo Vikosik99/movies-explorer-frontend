@@ -10,7 +10,7 @@
 .Techs__glava {
   margin: 0;
   padding: 0;
-  font-family: Inter;
+
   font-size: 22px;
   font-weight: 400;
   line-height: 27px;
@@ -34,7 +34,7 @@
 .Techs__zagalovok {
   margin: 0;
   padding: 0;
-  font-family: Inter;
+
   font-size: 50px;
   font-weight: 400;
   line-height: 58px;
@@ -45,7 +45,7 @@
 .Techs__text {
   margin: 0;
   padding: 0;
-  font-family: Inter;
+
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -56,7 +56,7 @@
 .Techs__programs {
   margin: 0;
   padding: 0;
-  font-family: Inter;
+
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;

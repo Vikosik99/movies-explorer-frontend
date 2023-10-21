@@ -1,9 +1,9 @@
 import "./SearchForm.css"
-import search from "../../../images/film-icon-lupa.svg"
+import search from "../../images/film-icon-lupa.svg"
 
 export function SearchForm() {
   return (
-    <div className="SearchForm">
+    <section className="SearchForm">
       <div className="SearchForm__block">
         <img
           className="SearchForm__search"
@@ -22,6 +22,6 @@ export function SearchForm() {
         <p className="SearchForm__flashFilm">Короткометражки</p>
       </div>
       <div className="SearchForm__line"></div>
-    </div>
+    </section>
   )
 }

@@ -8,9 +8,6 @@ export function MoviesCardList() {
       <section className="elements elements__savedMovies" >
         <MoviesCard />
       </section>
-      <div className="elements__more elements__more_hide">
-        <button className="elements__more__button">Ещё</button>
-      </div>
     </div>
   )
 }

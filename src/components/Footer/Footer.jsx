@@ -1,14 +1,15 @@
 import "./Footer.css"
+import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
     <footer className="footer">
-      <h3 className="footer__projecct">Учебный проект Яндекс.Практикум х BeatFilm.</h3>
+      <h3 className="footer__project">Учебный проект Яндекс.Практикум х BeatFilm.</h3>
       <div className="footer__text">
         <p className="footer_year">&copy; 2023</p>
         <div className="footer__linlks">
-          <p className="footer__link">Яндекс.Практикум</p>
-          <p className="footer__link">Github</p>
+          <Link className="footer__link" target="_blank" to="https://practicum.yandex.ru">Яндекс.Практикум</Link>
+          <Link className="footer__link" target="_blank" to="https://github.com/Vikosik99">Github</Link>
         </div>
       </div>
     </footer>

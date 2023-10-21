@@ -17,7 +17,7 @@
 .notFound__error {
   margin: 0;
   padding: 0;
-  font-family: Inter;
+
   font-size: 140px;
   font-weight: 400;
   line-height: 169px;
@@ -28,7 +28,7 @@
 .notFound__error-text {
   margin: 0;
   padding: 0;
-  font-family: Inter;
+
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
@@ -37,7 +37,7 @@
 }
 
 .notFound__back {
-  font-family: Inter;
+
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;

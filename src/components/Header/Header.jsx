@@ -1,19 +1,16 @@
 import "./Header.css"
-import logoHeader from "../../images/header-logo-standart.svg"
 import menIcon from "../../images/header-icon-men.svg"
 import closeIcon from "../../images/header-button-close.svg"
+import { useNavigate } from "react-router-dom";
+import { Logo } from "../Logo/Logo";
 
 
 export function Header() {
+  const navigate = useNavigate();
+
   return (
     <header className="header header__movies">
-      <button className="header__logo">
-        <img
-          className="logo"
-          src={logoHeader}
-          alt="логотип"
-        />
-      </button>
+      <Logo />
       <div className="header__container">
         <div className="header__burger">
           <span></span>
@@ -22,7 +19,7 @@ export function Header() {
           <button
             type="button"
             className={`header__button-close header__button-close_active`}
-          // onClick={onClose}
+            // onClick={onClose}
           >
             <img
               className="header__close"
@@ -46,8 +43,8 @@ export function Header() {
             </button>
           </div>
           <div className="header__notauthorization">
-            <button className="header__reg">Регистрация</button>
-            <button className="header__comein">Войти</button>
+            <button className="header__reg" onClick={() => navigate("/signup")}>Регистрация</button>
+            <button className="header__comein" onClick={() => navigate("/signin")}>Войти</button>
           </div>
         </div>
       </div>

@@ -43,7 +43,7 @@
 }
 
 .element__like {
-  background-image: url(../../../images/film-icon-like.svg);
+  background-image: url(../../images/film-icon-like.svg);
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
@@ -63,7 +63,7 @@
 }
 
 .element__like_active {
-  background-image: url(../../../images/film-icon-like-active.svg);
+  background-image: url(../../images/film-icon-like-active.svg);
 }
 
 .element__like-text {
@@ -80,7 +80,7 @@
   overflow: hidden;
   /* max-width: 219px; */
   text-align: center;
-  font-family: Inter;
+
   font-size: 11px;
   font-weight: 400;
   line-height: 13px;
@@ -112,7 +112,7 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 219px;
-  font-family: Inter;
+
   font-size: 13px;
   font-weight: 500;
   line-height: 16px;

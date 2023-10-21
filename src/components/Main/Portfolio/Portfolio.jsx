@@ -1,4 +1,5 @@
 import "./Portfolio.css"
+import { Link } from "react-router-dom";
 
 export function Portfolio() {
   return (
@@ -7,31 +8,26 @@ export function Portfolio() {
         <h2 className="AboutMe__portfolio">Портфолио</h2>
         <ul className="AboutMe__links">
           <li className="AboutMe__cont">
-            <a
-              href="f"
-              className="AboutMe__link"
-            >
+            <Link to="https://github.com/Vikosik99/first-project" className="AboutMe__link" target="_blank">
               <p className="AboutMe__link_1">Статичный сайт</p>
-              <p className="AboutMe__link_2">&#129133;</p>
-            </a>
+              <p className="AboutMe__link_2">↗</p>
+            </Link>
           </li>
           <li className="AboutMe__cont">
-            <a
-              href="h"
-              className="AboutMe__link"
-            >
+            <Link to="https://vikosik99.github.io/russian-travel/" className="AboutMe__link" target="_blank">
               <p className="AboutMe__link_1">Адаптивный сайт</p>
-              <p className="AboutMe__link_2">&#129133;</p>
-            </a>
+              <p className="AboutMe__link_2">↗</p>
+            </Link>
           </li>
           <li className="AboutMe__cont">
-            <a
-              href="h"
+            <Link
+              to="https://github.com/Vikosik99/react-mesto-api-full-gha"
               className="AboutMe__link"
+              target="_blank"
             >
               <p className="AboutMe__link_1">Одностраничное приложение</p>
-              <p className="AboutMe__link_2">&#129133;</p>
-            </a>
+              <p className="AboutMe__link_2">↗</p>
+            </Link>
           </li>
         </ul>
       </div>

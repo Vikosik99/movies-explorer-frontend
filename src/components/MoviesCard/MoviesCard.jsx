@@ -1,5 +1,5 @@
 import "./MoviesCard.css"
-import menIcon from "../../../images/film-33SlovaO.png"
+import menIcon from "../../images/film-33SlovaO.png"
 
 export function MoviesCard() {
   return (

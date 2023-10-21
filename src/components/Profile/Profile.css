@@ -1,7 +1,6 @@
 .profile {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
   max-width: 1280px;
   width: 100%;
   display: flex;
@@ -13,7 +12,6 @@
 .form {
   margin: 0;
   padding: 0;
-  width: 100%;
   width: 410px;
   height: 483px;
   display: flex;
@@ -23,11 +21,10 @@
 }
 
 .form__title {
-  font-family: Inter;
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -51,7 +48,6 @@
 }
 
 .form__span {
-  font-family: Inter;
   font-size: 11px;
   font-weight: 500;
   line-height: 13px;
@@ -60,7 +56,6 @@
 }
 
 .form__input {
-  font-family: Inter;
   font-size: 11px;
   font-weight: 400;
   line-height: 13px;
@@ -76,11 +71,10 @@
 }
 
 .form__input_error_email {
-  font-family: Inter;
   font-size: 10px;
   font-weight: 400;
   line-height: 12px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #ee3465;
   position: absolute;
@@ -88,15 +82,32 @@
 }
 
 .form__input_error_name {
-  font-family: Inter;
   font-size: 10px;
   font-weight: 400;
   line-height: 12px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
   color: #ee3465;
   position: absolute;
   top: -20px;
+}
+
+.form__response {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 14px;
+  min-height: 14px;
+}
+
+.form__response_type_info {
+  color: #fff;
+}
+
+.form__response_type_error {
+  color: #ee3465;
 }
 
 .form__navigate {
@@ -109,11 +120,10 @@
 .form__navigate__button-edit {
   margin: 0;
   padding: 0;
-  font-family: Inter;
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   text-align: center;
   margin-top: auto;
   border: none;
@@ -123,11 +133,10 @@
 }
 
 .form__navigate__button-exit {
-  font-family: Inter;
   font-size: 13px;
   font-weight: 500;
   line-height: 16px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   text-align: center;
   background-color: transparent;
   border: none;

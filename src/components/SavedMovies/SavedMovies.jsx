@@ -1,12 +1,18 @@
 import "./SavedMovies.css"
-import { SearchForm } from "../Movies/SearchForm/SearchForm";
-import { MoviesCardList } from "../Movies/MoviesCardList/MoviesCardList";
+import { SearchForm } from "../SearchForm/SearchForm";
+import { MoviesCardList } from "../MoviesCardList/MoviesCardList";
+import { Footer } from "../Footer/Footer";
+import { Header } from "../Header/Header";
 
 export function SavedMovies() {
   return (
-    <div className="savedMovies">
-      <SearchForm></SearchForm>
-      <MoviesCardList></MoviesCardList>
-    </div>
+    <>
+      <Header />
+      <main className="savedMovies">
+        <SearchForm></SearchForm>
+        <MoviesCardList></MoviesCardList>
+      </main>
+      <Footer />
+    </>
   )
 }

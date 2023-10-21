@@ -1,0 +1,18 @@
+.form__navigate-button {
+  margin: 0;
+  padding: 0;
+  width: 396px;
+  height: 45px;
+  border-radius: 3px;
+  background: #4285F4;
+  color: #FFFFFF;
+  border: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.form__navigate-button_disabled {
+  color: #C2C2C2;
+  background-color: #F8F8F8;
+}

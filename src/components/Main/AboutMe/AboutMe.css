@@ -9,7 +9,6 @@
 }
 
 .AboutMe__glava {
-  font-family: Inter;
   font-size: 22px;
   font-weight: 400;
   line-height: 27px;
@@ -22,9 +21,8 @@
 }
 
 .AboutMe__about {
-  margin: 0;
+  margin: 66px 0 0;
   padding: 0;
-  margin-top: 66px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -39,7 +37,6 @@
 .AboutMe__name {
   margin: 0;
   padding: 0;
-  font-family: Inter;
   font-size: 50px;
   font-weight: 400;
   line-height: 58px;
@@ -47,37 +44,34 @@
 }
 
 .AboutMe__job {
-  margin: 0;
+  margin: 18px 0 0;
   padding: 0;
-  font-family: Inter;
   font-size: 18px;
   font-weight: 500;
   line-height: 20px;
   text-align: left;
-  margin-top: 18px;
 
 }
 
 .AboutMe__textMe {
-  margin: 0;
   padding: 0;
-  font-family: Inter;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
   text-align: left;
-  margin-top: 26px;
+  margin: 26px 0 0;
 }
 
 .AboutMe__git {
-  margin: 0;
   padding: 0;
-  font-family: Inter;
   font-size: 14px;
   font-weight: 500;
   line-height: 17px;
   text-align: left;
-  margin-top: 99px
+  margin: 99px 0 0;
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
 }
 
 .AboutMe__img {
@@ -93,7 +87,7 @@
 @media screen and (max-width: 1180px) {
   .AboutMe {
     width: 100%;
-    padding: 90px 50px 0px;
+    padding: 90px 50px 0;
   }
 
   .AboutMe__textMe {
