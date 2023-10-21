@@ -6,7 +6,7 @@ import closeIcon from "../../images/header-button-close.svg"
 
 export function Header() {
   return (
-    <header className="header">
+    <header className="header header__movies">
       <button className="header__logo">
         <img
           className="logo"
@@ -18,7 +18,7 @@ export function Header() {
         <div className="header__burger">
           <span></span>
         </div>
-        <div className="header__menu">
+        <div className="header__menu header__menu_navigate header__menu_notauthorization">
           <button
             type="button"
             className={`header__button-close header__button-close_active`}
@@ -30,12 +30,12 @@ export function Header() {
               alt="крест"
             />
           </button>
-          <div className="header__films">
+          <div className="header__films header__films_hide">
             <button className="header__home">Главная</button>
             <button className="header__film">Фильмы</button>
             <button className="header__filmSave">Сохранённые фильмы</button>
           </div>
-          <div className="header__authorization">
+          <div className="header__authorization header__authorization_hide">
             <button className="header__log">Аккаунт</button>
             <button className="header__men">
               <img
@@ -44,6 +44,10 @@ export function Header() {
                 alt="иконка человека"
               />
             </button>
+          </div>
+          <div className="header__notauthorization">
+            <button className="header__reg">Регистрация</button>
+            <button className="header__comein">Войти</button>
           </div>
         </div>
       </div>

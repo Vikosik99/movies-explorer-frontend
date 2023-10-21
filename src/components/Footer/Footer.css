@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   background-color: #202020;
-  width: 1280px;
+  width: 100%;
   padding: 79px 70px 20px;
   color: #FFFFFF;
 }
@@ -13,7 +13,7 @@
   padding: 0;
   box-sizing: border-box;
   border-bottom: solid 1px #424242;
-  padding-bottom: 20px;
+  padding-bottom: 19px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,12 +69,13 @@
 @media screen and (max-width: 1180px) {
   .footer {
     width: 100%;
+    padding: 59px 30px 20px;
   }
 }
 
 @media screen and (max-width: 728px) {
   .footer {
-    padding: 79px 10px 20px;
+    padding: 79px 10px 10px;
   }
 
   .footer__text {

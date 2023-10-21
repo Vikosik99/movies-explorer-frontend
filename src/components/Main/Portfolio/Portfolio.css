@@ -1,0 +1,138 @@
+.portfolio {
+  margin: 0;
+  padding: 0;
+  background-color: #202020;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px 70px 110px;
+  color: #FFFFFF;
+}
+
+.portfolio__container {
+  margin: 0;
+  padding: 0;
+}
+
+.AboutMe__portfolio {
+  margin: 0;
+  padding: 0;
+  margin-top: 100px;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #8B8B8B;
+
+}
+
+.AboutMe__cont {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+.AboutMe__links {
+  margin: 0;
+  padding: 0;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  gap: 22px;
+
+}
+
+.AboutMe__link {
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px #424242 solid;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  width: 100%;
+  /* padding-top: 15px; */
+  padding-bottom: 7px;
+  text-decoration: none;
+}
+
+.AboutMe__link_1 {
+  font-family: Inter;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: left;
+  margin: 0;
+}
+
+.AboutMe__link_2 {
+  font-family: Inter;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 60px;
+  text-align: left;
+  margin: 0;
+
+}
+
+.AboutMe__link_end {
+  border: 0;
+}
+
+
+@media screen and (max-width: 1180px) {
+
+  .AboutMe__links {
+    width: 100%;
+  }
+
+  .portfolio {
+    padding: 0px 50px 90px;
+  }
+
+  .AboutMe__portfolio {
+    margin-top: 91px;
+  }
+
+  .AboutMe__link {
+    padding-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 728px) {
+
+  .AboutMe__link {
+    padding-bottom: 19px;
+  }
+
+  .portfolio {
+    padding: 0px 14px 70px;
+  }
+
+  .AboutMe__portfolio {
+    margin-top: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .AboutMe__links {
+    margin-top: 40px;
+  }
+
+  .AboutMe__link_1 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .AboutMe__link_2 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}

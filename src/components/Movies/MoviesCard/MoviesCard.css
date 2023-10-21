@@ -45,8 +45,8 @@
 .element__like {
   background-image: url(../../../images/film-icon-like.svg);
   background-repeat: no-repeat;
-  width: 22px;
-  height: 19px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
   margin: 0;
   padding: 0;
@@ -78,7 +78,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 219px;
+  /* max-width: 219px; */
   text-align: center;
   font-family: Inter;
   font-size: 11px;
@@ -94,7 +94,8 @@
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  margin: 14px 0 29px;
+  margin: 7px 0 25px;
+  align-items: center;
   /* margin: 17px 20px 0px 21px; */
 }
 
@@ -119,6 +120,21 @@
   color: #ffffff;
 }
 
+@media screen and (max-width: 1180px) {
+
+  .element {
+    width: 339px;
+    min-height: 190px;
+    height: 190px;
+  }
+
+  .element__img {
+    width: 339px;
+    min-height: 190px;
+    height: 190px;
+  }
+}
+
 @media screen and (max-width: 728px) {
 
   .element {
@@ -134,7 +150,7 @@
   }
 
   .element__mesto {
-    margin: 15px 0 29px;
+    margin: 7px 0 23px;
   }
 
 }

@@ -25,7 +25,7 @@ export function App() {
       <CurrentUserContext.Provider value={currentUser}>
         <Header />
         <Routes>
-          <Route path="/" element={<Main />} />
+          {/* <Route path="/" element={<Main />} /> */}
           <Route path="/signup" element={<Register />} />
           <Route path="/signin" element={<Login setCurrentUser={setCurrentUser} />} />
           <Route path="/profile" element={<Profile setCurrentUser={setCurrentUser} />} />
@@ -33,8 +33,12 @@ export function App() {
           <Route path="/saved-movies" element={<SavedMovies />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer></Footer>
-        <Movies />
+        {/* <Profile></Profile> */}
+        {/* <Login></Login> */}
+        {/* <Register></Register> */}
+        {/* <Movies /> */}
+        {/* <SavedMovies></SavedMovies> */}
+        {/* <Footer></Footer> */}
       </CurrentUserContext.Provider>
     </div >
   )

@@ -1,11 +1,11 @@
 .aboutProject {
   background-color: #202020;
-  width: 1280px;
+  width: 100%;
   height: 608px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  padding: 70px 110px;
+  padding: 89px 70px 110px;
 }
 
 
@@ -17,9 +17,9 @@
   letter-spacing: -0.04em;
   text-align: left;
   color: #FFFFFF;
-  padding-bottom: 23px;
+  padding-bottom: 22px;
   border-bottom: 1px solid #DADADA;
-
+  margin: 0;
 }
 
 .aboutProject__text {
@@ -115,9 +115,19 @@
 
 @media screen and (max-width: 1180px) {
   .aboutProject {
-    padding: 50px 90px;
+    padding: 90px 50px;
     width: 100%;
+    height: auto;
   }
+
+  .aboutProject__text {
+    gap: 23px 30px;
+  }
+
+  .aboutProject__shkala {
+    margin-top: 86px;
+  }
+
 }
 
 /*728px*/
@@ -132,7 +142,8 @@
   .aboutProject__text {
     grid-template-columns: repeat(1, 1fr);
     gap: 0;
-    row-gap: 16px;
+    row-gap: 8px;
+    margin-top: 60px;
   }
 
   .aboutProject__glava {
@@ -156,7 +167,8 @@
   }
 
   .aboutProject__shkala__text {
-    line-height: 11px;
+    font-size: 11px;
+    line-height: 13px;
   }
 
   .aboutProject__text__diplon_2 {
@@ -171,6 +183,7 @@
   }
 
   .aboutProject__shkala {
-    margin-top: 40px;
+    margin-top: 51px;
+    gap: 10px 0px;
   }
 }

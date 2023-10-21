@@ -1,0 +1,29 @@
+.savedMovies {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.elements__savedMovies {
+  height: 540px;
+}
+
+.elements__more_hide {
+  display: none;
+}
+
+@media screen and (max-width: 1180px) {
+  .elements__savedMovies {
+    min-height: 648px;
+  }
+}
+
+@media screen and (max-width: 728px) {
+  .elements__savedMovies {
+    min-height: 716px;
+  }
+}

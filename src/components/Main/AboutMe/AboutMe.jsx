@@ -19,21 +19,21 @@ export function AboutMe() {
           alt="иконка человека"
         />
       </div>
-      <h2 className="AboutMe__portfolio">Портфолио</h2>
-      <div className="AboutMe__links">
-        <button className="AboutMe__link">
+      {/* <h2 className="AboutMe__portfolio">Портфолио</h2>
+      <ul className="AboutMe__links">
+        <li className="AboutMe__link">
           <p className="AboutMe__link_1">Статичный сайт</p>
           <p className="AboutMe__link_2">&#129133;</p>
-        </button>
-        <button className="AboutMe__link">
+        </li>
+        <li className="AboutMe__link">
           <p className="AboutMe__link_1">Адаптивный сайт</p>
           <p className="AboutMe__link_2">&#129133;</p>
-        </button>
-        <button className="AboutMe__link AboutMe__link_end">
+        </li>
+        <li className="AboutMe__link AboutMe__link_end">
           <p className="AboutMe__link_1">Одностраничное приложение</p>
           <p className="AboutMe__link_2">&#129133;</p>
-        </button>
-      </div>
+        </li>
+      </ul> */}
     </div>
   )
 }
