@@ -15,7 +15,7 @@
   padding: 70px 30px 70px;
 }
 
-.form__login {
+.login__form {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -27,7 +27,18 @@
   gap: 35px;
 }
 
-.form__login__regestration {
+.login__title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+}
+
+.login__regestration {
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -35,7 +46,7 @@
   color: #8B8B8B;
 }
 
-.form__login__link {
+.login__link {
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -45,11 +56,11 @@
   padding-left: 6px;
 }
 
-.form__login__link:hover {
+.login__link:hover {
   opacity: 0.7;
 }
 
-.form__inputs__login {
+.login__inputs-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -58,14 +69,14 @@
   position: relative;
 }
 
-.form__span__login {
+.login__span {
   font-weight: 400;
   font-size: 10px;
   line-height: 1.2;
   color: #8b8b8b;
 }
 
-.form__input__login {
+.login__input {
   padding: 6px 0;
   box-sizing: border-box;
   border-style: none;
@@ -77,7 +88,7 @@
   color: #fff;
 }
 
-.form__container__login {
+.login__form-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -85,7 +96,7 @@
   margin-top: 7px;
 }
 
-.form__navigate__login {
+.login__navigate {
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -93,18 +104,28 @@
   margin-top: 181px;
 }
 
+.login__input-error {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #ee3465;
+  position: absolute;
+  top: 47px;
+}
 
 @media screen and (max-width: 800px) {
-  .form__login {
+  .login__form {
     gap: 36px;
     margin-top: 162px;
   }
 
-  .form__navigate__login {
+  .login__navigate {
     margin-top: 182px;
   }
 
-  .form__container__login {
+  .login__form-container {
     margin-top: 5px;
   }
 
@@ -115,13 +136,13 @@
 
 @media screen and (max-width: 500px) {
 
-  .form__input__login {
+  .login__input {
     width: 260px;
     font-size: 14px;
     line-height: 17px;
   }
 
-  .form__login {
+  .login__form {
     width: 260px;
     margin: 0;
     gap: 46px;
@@ -132,12 +153,12 @@
     padding: 70px 30px 70px;
   }
 
-  .form__navigate__login {
+  .login__navigate {
     margin-top: 260px;
     gap: 15px;
   }
 
-  .form__container__login {
+  .login__form-container {
     margin-top: 35px;
   }
 
@@ -150,12 +171,12 @@
     height: 45px;
   }
 
-  .form__login__regestration {
+  .login__regestration {
     font-size: 12px;
     line-height: 15px;
   }
 
-  .form__login__link {
+  .login__link {
     font-size: 12px;
     line-height: 15px;
   }

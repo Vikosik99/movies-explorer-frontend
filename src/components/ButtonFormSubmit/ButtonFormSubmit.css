@@ -1,4 +1,4 @@
-.form__navigate-button {
+.navigate-button {
   margin: 0;
   padding: 0;
   width: 396px;
@@ -12,18 +12,18 @@
   line-height: 17px;
 }
 
-.form__navigate-button:hover {
+.navigate-button:hover {
   opacity: 0.8;
 }
 
 
-.form__navigate-button_disabled {
+.navigate-button_disabled {
   color: #C2C2C2;
   background-color: #F8F8F8;
   width: 396px;
   height: 45px;
 }
 
-.form__navigate-button_disabled:hover {
+.navigate-button_disabled:hover {
   opacity: 0.8;
 }

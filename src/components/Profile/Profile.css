@@ -9,7 +9,7 @@
   padding: 74px 30px 70px;
 }
 
-.form {
+.profile__form {
   margin: 0;
   padding: 0;
   width: 410px;
@@ -20,7 +20,7 @@
   gap: 107px;
 }
 
-.form__title {
+.profile__title {
   font-size: 24px;
   font-weight: 500;
   line-height: 29px;
@@ -31,14 +31,14 @@
   color: #FFFFFF;
 }
 
-.form__container {
+.profile__form-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 3px;
 }
 
-.form__inputs {
+.profile__inputs-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@
   color: #FFFFFF;
 }
 
-.form__span {
+.profile__span {
   font-size: 11px;
   font-weight: 500;
   line-height: 13px;
@@ -55,7 +55,7 @@
   top: 16px;
 }
 
-.form__input {
+.profile__input {
   font-size: 11px;
   font-weight: 400;
   line-height: 13px;
@@ -70,7 +70,7 @@
   color: #fff;
 }
 
-.form__input_error_email {
+.profile__input-error {
   font-size: 10px;
   font-weight: 400;
   line-height: 12px;
@@ -81,18 +81,8 @@
   top: 47px;
 }
 
-.form__input_error_name {
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 12px;
-  letter-spacing: 0;
-  text-align: left;
-  color: #ee3465;
-  position: absolute;
-  top: 47px;
-}
 
-.form__response {
+.profile__response {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -102,22 +92,22 @@
   min-height: 14px;
 }
 
-.form__response_type_info {
+.profile__response_type_info {
   color: #fff;
 }
 
-.form__response_type_error {
+.profile__response_type_error {
   color: #ee3465;
 }
 
-.form__navigate__profile {
+.profile__navigate {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin-top: 70px;
+  margin-top: 96px;
 }
 
-.form__navigate__button-edit {
+.profile__button-edit {
   margin: 0;
   padding: 0;
   font-size: 13px;
@@ -132,11 +122,7 @@
   cursor: pointer;
 }
 
-.form__navigate__button-edit:hover {
-  opacity: 0.8;
-}
-
-.form__navigate__button-exit {
+.profile__button-exit {
   font-size: 13px;
   font-weight: 500;
   line-height: 16px;
@@ -148,38 +134,24 @@
   cursor: pointer;
 }
 
-.form__navigate__button-exit:hover {
-  opacity: 0.8;
-}
-
 @media screen and (max-width: 800px) {
-  .form {
+  .profile__form {
     gap: 81px;
     margin-top: 160px;
   }
 
-  .form__navigate__profile {
-    margin-top: 86px;
+  .profile__navigate {
+    margin-top: 112px;
   }
 }
 
 @media screen and (max-width: 500px) {
 
-  .form__navigate__button-edit {
-    font-size: 12px;
-    line-height: 15px;
-  }
-
-  .form__navigate__button-exit {
-    font-size: 12px;
-    line-height: 15px;
-  }
-
-  .form__input {
+  .profile__input {
     width: 260px;
   }
 
-  .form {
+  .profile__form {
     width: 260px;
     margin: 0;
     gap: 63px;
@@ -189,7 +161,12 @@
     padding: 70px 30px 70px;
   }
 
-  .form__navigate__profile {
-    margin-top: 273px;
+  .profile__navigate {
+    margin-top: 299px;
+  }
+
+  .form__navigate__button {
+    width: 260px;
+    height: 45px;
   }
 }

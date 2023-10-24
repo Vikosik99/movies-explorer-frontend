@@ -6,26 +6,26 @@ import useFormAndValidation from "../../hooks/useFormAndValidation";
 import { ButtonFormSubmit } from "../ButtonFormSubmit/ButtonFormSubmit";
 import { PROFILE_CHANGE_SUCCESS } from "../../utils/constants";
 
-export function Profile({handleLogout, setCurrentUser}) {
+export function Profile({ handleLogout, setCurrentUser }) {
   const currentUser = useContext(CurrentUserContext);
-  const {values, handleChange, errors, isValid, setIsValid, setValues} = useFormAndValidation();
+  const { values, handleChange, errors, isValid, setIsValid, setValues } = useFormAndValidation();
   const [isSubmitVisible, setIsSubmitVisible] = useState(false);
-  const [response, setResponse] = useState({type: "", message: ""});
+  const [response, setResponse] = useState({ type: "", message: "" });
 
   function handleSubmit(e) {
     e.preventDefault();
-    setCurrentUser((prev) => ({...prev, name: values.name, email: values.email}));
+    setCurrentUser((prev) => ({ ...prev, name: values.name, email: values.email }));
     setIsSubmitVisible(false);
-    setResponse({type: "info", message: PROFILE_CHANGE_SUCCESS});
+    setResponse({ type: "info", message: PROFILE_CHANGE_SUCCESS });
   }
 
   function handleChangeInfo(e) {
     setIsSubmitVisible(true);
-    setResponse({type: "info", message: ""});
+    setResponse({ type: "info", message: "" });
   }
 
   useEffect(() => {
-    setValues({name: currentUser.name, email: currentUser.email});
+    setValues({ name: currentUser.name, email: currentUser.email });
   }, [currentUser.email, currentUser.name])
 
   return (
@@ -33,14 +33,14 @@ export function Profile({handleLogout, setCurrentUser}) {
       <Header />
       <main>
         <section className="profile">
-          <form className="form form__profile" name="profile" noValidate onSubmit={handleSubmit}>
-            <h1 className="form__title form__title__profile">Привет, {currentUser.name}!</h1>
-            <div className="form__container form__container__profile">
-              <div className="form__inputs">
-                <span className="form__span">Имя</span>
+          <form className="profile__form" name="profile" noValidate onSubmit={handleSubmit}>
+            <h1 className="profile__title">Привет, {currentUser.name}!</h1>
+            <div className="profile__form-container">
+              <div className="profile__inputs-container">
+                <span className="profile__span">Имя</span>
                 <input
                   name="name"
-                  className="form__input"
+                  className="profile__input"
                   type="text"
                   required
                   minLength="2"
@@ -49,13 +49,13 @@ export function Profile({handleLogout, setCurrentUser}) {
                   onChange={handleChange}
                   disabled={!isSubmitVisible}
                 />
-                <span className="form__input_error_name">{errors["name"]}</span>
+                <span className="profile__input-error profile__input-error_name">{errors["name"]}</span>
               </div>
-              <div className="form__inputs">
-                <span className="form__span">E-mail</span>
+              <div className="profile__inputs-container">
+                <span className="profile__span">E-mail</span>
                 <input
                   name="email"
-                  className="form__input"
+                  className="profile__input"
                   type="email"
                   required
                   minLength="8"
@@ -64,12 +64,12 @@ export function Profile({handleLogout, setCurrentUser}) {
                   onChange={handleChange}
                   disabled={!isSubmitVisible}
                 />
-                <span className="form__input_error_email">{errors["email"]}</span>
+                <span className="profile__input-error profile__input-error_email">{errors["email"]}</span>
               </div>
             </div>
-            <div className="form__navigate form__navigate__profile">
+            <div className="profile__navigate">
               <p
-                className={`form__response ${response.type === "info" ? "form__response_type_info" : "form__response_type_error"}`}>
+                className={`profile__response ${response.type === "info" ? "profile__response_type_info" : "profile__response_type_error"}`}>
                 {response.message}
               </p>
               {isSubmitVisible
@@ -79,7 +79,7 @@ export function Profile({handleLogout, setCurrentUser}) {
                 <>
                   <button
                     type="button"
-                    className="form__navigate__button-edit profile__button-edit_disabled"
+                    className="profile__button-edit profile__button-edit_disabled"
                     onClick={handleChangeInfo}
                   >
                     Редактировать
@@ -87,7 +87,7 @@ export function Profile({handleLogout, setCurrentUser}) {
                   <button
                     onClick={handleLogout}
                     type="button"
-                    className="form__navigate__button-exit">
+                    className="profile__button-exit">
                     Выйти из аккаунта
                   </button>
                 </>

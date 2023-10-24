@@ -4,7 +4,7 @@ import logoHeader from "../../../images/main-landing-logo.svg"
 
 export function Promo() {
   return (
-    <div className="promo">
+    <section className="promo">
       <div className="promo__container">
 
         <h1 className="promo__text">Учебный проект студента факультета Веб-разработки.</h1>
@@ -14,6 +14,6 @@ export function Promo() {
           alt="логотип"
         />
       </div>
-    </div>
+    </section>
   )
 }

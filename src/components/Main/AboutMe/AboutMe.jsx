@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export function AboutMe() {
   return (
-    <div className="AboutMe">
+    <section className="AboutMe">
       <div className="AboutMe__container">
         <h2 className="AboutMe__glava">Студент</h2>
         <div className="AboutMe__about">
@@ -22,6 +22,6 @@ export function AboutMe() {
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }

@@ -2,6 +2,7 @@ import "./Header.css"
 import menIcon from "../../images/header-icon-men.svg"
 import closeIcon from "../../images/header-button-close.svg"
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Logo } from "../Logo/Logo";
 
 
@@ -9,7 +10,7 @@ export function Header() {
   const navigate = useNavigate();
 
   return (
-    <header className="header header__movies">
+    <header className="header header_movies">
       <div className="header__container">
         <Logo />
         <div className="header__navigation">
@@ -29,9 +30,9 @@ export function Header() {
               />
             </button>
             <div className="header__films header__films_hide">
-              <button className="header__home">Главная</button>
-              <button className="header__film">Фильмы</button>
-              <button className="header__filmSave">Сохранённые фильмы</button>
+              <Link className="header__home" target="_blank" to="http://localhost:3000/">Главная</Link>
+              <Link className="header__film" target="_blank" to="http://localhost:3000/movies">Фильмы</Link>
+              <Link className="header__filmSave" target="_blank" to="http://localhost:3000/saved-movies">Сохранённые фильмы</Link>
             </div>
             <div className="header__authorization header__authorization_hide">
               <button className="header__log">Аккаунт</button>

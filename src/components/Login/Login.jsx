@@ -17,46 +17,46 @@ export function Login({ setCurrentUser }) {
   return (
     <section className="login">
       <div className="login__container">
-        <form className="form__login" name="login" noValidate onSubmit={handleLogin}>
+        <form className="login__form" name="login" noValidate onSubmit={handleLogin}>
           <Logo />
-          <h1 className="form__title form__title__profile">Рады видеть!</h1>
-          <div className="form__container__login">
-            <div className="form__inputs__login">
-              <span className="form__span__login">E-mail</span>
+          <h1 className="login__title">Рады видеть!</h1>
+          <div className="login__form-container">
+            <div className="login__inputs-container">
+              <span className="login__span">E-mail</span>
               <input
                 name="email"
-                className="form__input__login"
+                className="login__input"
                 type="email"
                 required
                 value={values["email"] || ""}
                 onChange={handleChange}
-                placeholder="Email"
+                placeholder="E-mail"
                 minLength="8"
                 maxLength="30"
               />
-              <span className="form__input_error_email">{errors["email"]}</span>
+              <span className="login__input-error login__input-error_email">{errors["email"]}</span>
             </div>
-            <div className="form__inputs__login">
-              <span className="form__span__login">Пароль</span>
+            <div className="login__inputs-container">
+              <span className="login__span">Пароль</span>
               <input
                 name="password"
-                className="form__input__login"
+                className="login__input"
                 type="password"
                 required
                 minLength="4"
                 maxLength="30"
-                placeholder="Password"
+                placeholder="Пароль"
                 value={values["password"] || ""}
                 onChange={handleChange}
               />
-              <span className="form__input_error_name">{errors["password"]}</span>
+              <span className="login__input-error login__input-error_password">{errors["password"]}</span>
             </div>
           </div>
-          <div className="form__navigate__login">
+          <div className="login__navigate">
             <ButtonFormSubmit isValid={isValid} text="Войти" />
-            <span className="form__login__regestration">
+            <span className="login__regestration">
               Ещё не зарегистрированы?
-              <Link to='/signup' className="form__login__link">
+              <Link to='/signup' className="login__link">
                 Регистрация
               </Link>
             </span>

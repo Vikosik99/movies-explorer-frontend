@@ -11,26 +11,6 @@
   background-color: transparent;
 }
 
-/* .element__delete {
-  background-image: url(../../../images/vector-delete.svg);
-  width: 18px;
-  height: 19px;
-  cursor: pointer;
-  margin: 0;
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-} */
-
-/* .element__delete:hover {
-  opacity: 0.6;
-} */
-
 .element__img {
   width: 270px;
   min-height: 151px;

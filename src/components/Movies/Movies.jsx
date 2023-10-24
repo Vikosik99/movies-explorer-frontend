@@ -12,8 +12,8 @@ export function Movies() {
       <main className="movies">
         <SearchForm></SearchForm>
         <MoviesCardList></MoviesCardList>
-        <div className="elements__more elements__more_hide">
-          <button className="elements__more__button">Ещё</button>
+        <div className="movies__more movies__more_hide">
+          <button className="movies__more-button">Ещё</button>
         </div>
       </main>
       <Footer />

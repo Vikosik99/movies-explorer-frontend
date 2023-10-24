@@ -14,22 +14,22 @@
   max-width: 1280px;
 }
 
-.elements__savedMovies {
+.moviesCardList__elements_savedMovies {
   height: 540px;
 }
 
-.elements__more_hide {
+.movies__more_hide {
   display: none;
 }
 
 @media screen and (max-width: 1180px) {
-  .elements__savedMovies {
+  .moviesCardList__elements_savedMovies {
     min-height: 648px;
   }
 }
 
 @media screen and (max-width: 728px) {
-  .elements__savedMovies {
+  .moviesCardList__elements_savedMovies {
     min-height: 716px;
   }
 }
