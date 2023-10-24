@@ -9,8 +9,10 @@ export function SavedMovies() {
     <>
       <Header />
       <main className="savedMovies">
-        <SearchForm></SearchForm>
-        <MoviesCardList></MoviesCardList>
+        <div className="savedMovies__container">
+          <SearchForm></SearchForm>
+          <MoviesCardList></MoviesCardList>
+        </div>
       </main>
       <Footer />
     </>

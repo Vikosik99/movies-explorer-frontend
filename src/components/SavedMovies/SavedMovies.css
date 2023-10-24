@@ -1,11 +1,17 @@
 .savedMovies {
   width: 100%;
+}
+
+.savedMovies__container {
+  width: 100%;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 320px;
+  max-width: 1280px;
 }
 
 .elements__savedMovies {

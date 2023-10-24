@@ -4,19 +4,19 @@ import useFormAndValidation from "../../hooks/useFormAndValidation";
 import { Logo } from "../Logo/Logo";
 import { ButtonFormSubmit } from "../ButtonFormSubmit/ButtonFormSubmit";
 
-export function Login({setCurrentUser}) {
-  const {values, handleChange, errors, isValid, setIsValid} = useFormAndValidation();
+export function Login({ setCurrentUser }) {
+  const { values, handleChange, errors, isValid, setIsValid } = useFormAndValidation();
   const navigate = useNavigate();
 
   function handleLogin(e) {
     e.preventDefault();
-    setCurrentUser((prev) => ({...prev, email: values.email, isLogIn: true}))
-    navigate("/movies", {replace: true});
+    setCurrentUser((prev) => ({ ...prev, email: values.email, isLogIn: true }))
+    navigate("/movies", { replace: true });
   }
 
   return (
-    <main className="login">
-      <section>
+    <section className="login">
+      <div className="login__container">
         <form className="form__login" name="login" noValidate onSubmit={handleLogin}>
           <Logo />
           <h1 className="form__title form__title__profile">Рады видеть!</h1>
@@ -53,16 +53,16 @@ export function Login({setCurrentUser}) {
             </div>
           </div>
           <div className="form__navigate__login">
-            <ButtonFormSubmit isValid={isValid} text="Войти"/>
+            <ButtonFormSubmit isValid={isValid} text="Войти" />
             <span className="form__login__regestration">
-            Ещё не зарегистрированы?
-            <Link to='/signup' className="form__login__link">
-              Регистрация
-            </Link>
-          </span>
+              Ещё не зарегистрированы?
+              <Link to='/signup' className="form__login__link">
+                Регистрация
+              </Link>
+            </span>
           </div>
         </form>
-      </section>
-    </main>
+      </div>
+    </section>
   )
 }

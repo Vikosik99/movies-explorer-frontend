@@ -1,27 +1,28 @@
 .portfolio {
-  margin: 0;
   background-color: #202020;
+  width: 100%;
+}
+
+.portfolio__container {
+  padding: 0;
+  margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
   padding: 0 70px 110px;
   color: #FFFFFF;
-}
-
-.portfolio__container {
-  margin: 0;
-  padding: 0;
+  min-width: 320px;
+  max-width: 1280px;
 }
 
 .AboutMe__portfolio {
   margin: 0;
   padding: 0;
-  margin-top: 100px;
   font-size: 18px;
   font-weight: 400;
   line-height: 20px;
   text-align: left;
   color: #8B8B8B;
-
+  letter-spacing: 0px;
 }
 
 .AboutMe__cont {
@@ -60,12 +61,17 @@
   text-decoration: none;
 }
 
+.AboutMe__link:hover {
+  opacity: 0.7;
+}
+
 .AboutMe__link_1 {
   font-size: 30px;
   font-weight: 400;
   line-height: 50px;
   text-align: left;
   margin: 0;
+  letter-spacing: -0.04em;
 }
 
 .AboutMe__link_2 {
@@ -74,7 +80,7 @@
   line-height: 60px;
   text-align: left;
   margin: 0;
-
+  letter-spacing: -0.04em;
 }
 
 .AboutMe__link_end {
@@ -84,11 +90,20 @@
 
 @media screen and (max-width: 1180px) {
 
+  .AboutMe__link_1 {
+    font-size: 28px;
+  }
+
+  .AboutMe__link_2 {
+    font-size: 28px;
+  }
+
+
   .AboutMe__links {
     width: 100%;
   }
 
-  .portfolio {
+  .portfolio__container {
     padding: 0 50px 90px;
   }
 
@@ -107,7 +122,7 @@
     padding-bottom: 19px;
   }
 
-  .portfolio {
+  .portfolio__container {
     padding: 0 14px 70px;
   }
 

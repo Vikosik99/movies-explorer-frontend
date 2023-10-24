@@ -1,10 +1,16 @@
 .footer {
-  margin: 0;
-  box-sizing: border-box;
   background-color: #202020;
+  width: 100%;
+}
+
+.footer__container {
+  margin: 0 auto;
+  box-sizing: border-box;
   width: 100%;
   padding: 79px 70px 20px;
   color: #FFFFFF;
+  min-width: 320px;
+  max-width: 1280px;
 }
 
 .footer__project {
@@ -65,22 +71,26 @@
   box-sizing: border-box;
 }
 
+.footer__link:hover {
+  opacity: 0.7;
+}
+
 @media screen and (max-width: 1180px) {
-  .footer {
+  .footer__container {
     width: 100%;
     padding: 59px 30px 20px;
   }
 }
 
 @media screen and (max-width: 728px) {
-  .footer {
-    padding: 79px 10px 10px;
+  .footer__container {
+    padding: 55px 10px 10px;
   }
 
   .footer__text {
     flex-direction: column-reverse;
     padding-top: 30px;
-    gap: 30px;
+    gap: 31px;
     font-size: 12px;
     line-height: 15px;
   }

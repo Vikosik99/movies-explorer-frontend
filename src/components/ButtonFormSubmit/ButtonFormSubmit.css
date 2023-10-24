@@ -12,7 +12,18 @@
   line-height: 17px;
 }
 
+.form__navigate-button:hover {
+  opacity: 0.8;
+}
+
+
 .form__navigate-button_disabled {
   color: #C2C2C2;
   background-color: #F8F8F8;
+  width: 396px;
+  height: 45px;
+}
+
+.form__navigate-button_disabled:hover {
+  opacity: 0.8;
 }

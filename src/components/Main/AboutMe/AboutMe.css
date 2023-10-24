@@ -1,10 +1,15 @@
 .AboutMe {
   background-color: #202020;
   width: 100%;
-  /* height: 1079px; */
-  margin: 0;
+}
+
+.AboutMe__container {
+  min-width: 320px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
   box-sizing: border-box;
-  padding: 90px 70px 125px;
+  padding: 90px 70px 101px;
   color: #FFFFFF;
 }
 
@@ -21,7 +26,7 @@
 }
 
 .AboutMe__about {
-  margin: 66px 0 0;
+  margin: 67px 0 0;
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -41,6 +46,7 @@
   font-weight: 400;
   line-height: 58px;
   text-align: left;
+  letter-spacing: -0.04em;
 }
 
 .AboutMe__job {
@@ -50,7 +56,7 @@
   font-weight: 500;
   line-height: 20px;
   text-align: left;
-
+  letter-spacing: 0px;
 }
 
 .AboutMe__textMe {
@@ -59,7 +65,8 @@
   font-weight: 400;
   line-height: 22px;
   text-align: left;
-  margin: 26px 0 0;
+  margin: 27px 0 0;
+  letter-spacing: 0px;
 }
 
 .AboutMe__git {
@@ -72,6 +79,7 @@
   text-decoration: none;
   color: #FFFFFF;
   display: block;
+  letter-spacing: 0em;
 }
 
 .AboutMe__img {
@@ -85,7 +93,7 @@
 }
 
 @media screen and (max-width: 1180px) {
-  .AboutMe {
+  .AboutMe__container {
     width: 100%;
     padding: 90px 50px 0;
   }
@@ -132,7 +140,7 @@
 }
 
 @media screen and (max-width: 728px) {
-  .AboutMe {
+  .AboutMe__container {
     padding: 70px 14px;
   }
 
@@ -172,5 +180,11 @@
   .AboutMe__img {
     height: 352px;
     width: 292px;
+  }
+
+  .AboutMe__glava {
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 28px;
   }
 }

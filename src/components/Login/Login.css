@@ -1,25 +1,30 @@
 .login {
+  width: 100%;
+}
+
+.login__container {
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   max-width: 1280px;
+  min-width: 320px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 74px 30px 70px;
+  padding: 70px 30px 70px;
 }
 
 .form__login {
   margin: 0;
   padding: 0;
   width: 100%;
-  width: 410px;
+  width: 396px;
   height: 483px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 38px;
+  gap: 35px;
 }
 
 .form__login__regestration {
@@ -38,6 +43,10 @@
   color: #4285F4;
   text-decoration: none;
   padding-left: 6px;
+}
+
+.form__login__link:hover {
+  opacity: 0.7;
 }
 
 .form__inputs__login {
@@ -73,12 +82,14 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+  margin-top: 7px;
 }
 
 .form__navigate__login {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  margin: 0 auto;
   margin-top: 181px;
 }
 
@@ -86,7 +97,7 @@
 @media screen and (max-width: 800px) {
   .form__login {
     gap: 36px;
-    margin-top: 160px;
+    margin-top: 162px;
   }
 
   .form__navigate__login {
@@ -106,6 +117,8 @@
 
   .form__input__login {
     width: 260px;
+    font-size: 14px;
+    line-height: 17px;
   }
 
   .form__login {
@@ -129,7 +142,6 @@
   }
 
   .login {
-    padding: 56px 30px 70px;
     height: 780px;
   }
 
@@ -146,5 +158,10 @@
   .form__login__link {
     font-size: 12px;
     line-height: 15px;
+  }
+
+
+  .login__container {
+    padding: 56px 30px 70px;
   }
 }

@@ -1,9 +1,15 @@
 .SearchForm {
-  margin: 0;
-  box-sizing: border-box;
   background: #202020;
   width: 100%;
+}
+
+.SearchForm__container {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100%;
   padding: 70px 70px 10px 70px;
+  min-width: 320px;
+  max-width: 1280px;
 }
 
 .SearchForm__block {
@@ -52,13 +58,17 @@
   border-radius: 20px;
   background: #4285F4;
   border: 0;
-
   font-size: 11px;
   font-weight: 500;
   line-height: 18px;
   text-align: center;
   color: #ffffff;
-  margin-right: 30px
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.SearchForm__searchButton:hover {
+  opacity: 0.8;
 }
 
 .SearchForm__contfilm {
@@ -110,6 +120,10 @@
   transition-duration: 300ms;
 }
 
+.SearchForm__switch-off:hover {
+  opacity: 0.8;
+}
+
 .SearchForm__switch-off::after {
   content: "";
   height: 16px;
@@ -142,7 +156,7 @@
     margin-right: 20px;
   }
 
-  .SearchForm {
+  .SearchForm__container {
     padding: 80px 30px 10px;
   }
 
@@ -167,7 +181,7 @@
 }
 
 @media screen and (max-width: 728px) {
-  .SearchForm {
+  .SearchForm__container {
     padding: 80px 10px 10px 10px;
   }
 
