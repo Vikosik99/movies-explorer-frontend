@@ -9,11 +9,12 @@
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 90px 70px 101px;
+  padding: 110px 70px 101px;
   color: #FFFFFF;
 }
 
 .AboutMe__glava {
+  margin: 0;
   font-size: 22px;
   font-weight: 400;
   line-height: 27px;
@@ -36,7 +37,7 @@
 .AboutMe__text {
   margin: 0;
   padding: 0;
-  width: 600px;
+  max-width: 600px;
 }
 
 .AboutMe__name {
@@ -56,7 +57,7 @@
   font-weight: 500;
   line-height: 20px;
   text-align: left;
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
 
 .AboutMe__textMe {
@@ -65,8 +66,8 @@
   font-weight: 400;
   line-height: 22px;
   text-align: left;
-  margin: 27px 0 0;
-  letter-spacing: 0px;
+  margin: 26px 0 0;
+  letter-spacing: 0;
 }
 
 .AboutMe__git {
@@ -79,7 +80,12 @@
   text-decoration: none;
   color: #FFFFFF;
   display: block;
-  letter-spacing: 0em;
+  letter-spacing: 0;
+}
+
+.AboutMe__git:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .AboutMe__img {
@@ -126,11 +132,11 @@
   }
 
   .AboutMe__text {
-    width: 292px;
+    max-width: 364px;
   }
 
   .AboutMe__git {
-    margin-top: 88px;
+    margin-top: 87px;
   }
 
   .AboutMe__img {
@@ -170,7 +176,7 @@
   }
 
   .AboutMe__text {
-    width: 292px;
+    max-width: 292px;
   }
 
   .AboutMe__git {

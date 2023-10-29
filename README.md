@@ -1,4 +1,3 @@
 # movies-explorer-frontend
 
-# Test
-
+Макет dark-1

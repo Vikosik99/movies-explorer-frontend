@@ -1,22 +1,44 @@
 import "./MoviesCard.css"
-import menIcon from "../../images/film-33SlovaO.png"
+import { calcDuration } from "../../utils/utils";
+import { useLocation } from "react-router-dom";
 
-export function MoviesCard() {
+export function MoviesCard({movie, onDelete, onLike, onDislike}) {
+  const location = useLocation();
+
+  function handleDelete() {
+    // onDelete(movie);
+  }
+
+  function handleLike() {
+    // onLike(movie);
+  }
+
+  function handleDislike() {
+    // onDislike(movie);
+  }
+
+  function getButton() {
+    if (location.pathname === "/saved-movies") {
+      return <button type="button" className="element__like element__like_type_delete" onClick={handleDelete}/>
+    } else if (movie.saved) {
+      return <button className="element__like element__like_type_like" type="button" onClick={handleDislike}/>
+    } else {
+      return <button className="element__like element__like_type_dislike" type="button" onClick={handleLike}/>
+    }
+  }
+
   return (
-    <div>
-      <article className="element">
-        {/* <button type="button" className='element__delete' /> */}
+      <li className="element">
         <img
-          src={menIcon}
-          alt="картинка"
+          src={movie.image}
+          alt="фильм"
           className="element__img"
         />
-        <div className="element__mesto">
-          <h2 className="element__text">33 слова о дизайне</h2>
-          <button className="element__like" type="button" />
+        <div className="element__container">
+          <h2 className="element__text">{movie.nameRU}</h2>
+          {getButton()}
         </div>
-        <p className="element__like-text">1ч42м</p>
-      </article>
-    </div>
+        <p className="element__like-text">{calcDuration(movie.duration)}</p>
+      </li>
   )
 }

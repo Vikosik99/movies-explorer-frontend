@@ -11,13 +11,13 @@ export function Main() {
   return (
     <>
       <Header />
-      <div className="main">
-        <Promo></Promo>
-        <AboutProject></AboutProject>
-        <Techs></Techs>
-        <AboutMe></AboutMe>
-        <Portfolio></Portfolio>
-      </div>
+      <main className="main">
+        <Promo />
+        <AboutProject />
+        <Techs />
+        <AboutMe />
+        <Portfolio />
+      </main>
       <Footer />
     </>
   )

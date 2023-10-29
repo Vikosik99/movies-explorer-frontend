@@ -1,11 +1,30 @@
 .register {
   margin: 0;
-  max-width: 1280px;
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 70px 30px 70px;
+  justify-content: center;
+  padding-top: 70px;
+  width: 100%;
+}
+
+.register__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.register__form {
+  margin: 0;
+  padding: 0;
+  max-width: 396px;
+  width: 100%;
+  min-height: 483px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
 }
 
 .register__title {
@@ -23,8 +42,12 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
-  margin: 0 auto;
-  margin-top: 111px;
+  margin-top: 80px;
+  width: 100%;
+}
+
+.register__navigate_type_login {
+  margin-top: 149px;
 }
 
 .register__response-error {
@@ -33,6 +56,7 @@
   font-size: 11px;
   font-weight: 400;
   line-height: 14px;
+  min-height: 14px;
   color: #FF004C;
   text-align: center;
 }
@@ -48,59 +72,7 @@
   top: 47px;
 }
 
-@media screen and (max-width: 800px) {
-  .register {
-    height: 890px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .register {
-    padding: 56px 30px 0;
-    height: 730px;
-  }
-
-  .register__navigate {
-    margin-top: 191px;
-    gap: 15px;
-  }
-}
-
-
-
-
-
-
-.login {
-  width: 100%;
-}
-
-.login__container {
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 1280px;
-  min-width: 320px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 70px 30px 70px;
-}
-
-.register__form {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  width: 396px;
-  height: 483px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 35px;
-}
-
-.register__regestration {
+.register__registration {
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -120,110 +92,93 @@
 
 .register__link:hover {
   opacity: 0.7;
+  cursor: pointer;
 }
 
 .register__inputs-container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  cursor: pointer;
   position: relative;
 }
 
 .register__span {
   font-weight: 400;
   font-size: 10px;
-  line-height: 1.2;
-  color: #8b8b8b;
+  line-height: 12px;
+  color: #8B8B8B;
 }
 
 .register__input {
-  padding: 6px 0;
+  padding: 5px 0 10px;
+  margin: 0;
   box-sizing: border-box;
   border-style: none;
   border-bottom: 1px solid #424242;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.21;
+  line-height: 17px;
   background-color: transparent;
   color: #fff;
+}
+
+.register__input:focus {
+  outline: 1px solid #4285F4;
+  font-weight: 500;
 }
 
 .register__form-container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  margin-top: 7px;
+  gap: 24px;
 }
-
-.form__navigate__login {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin: 0 auto;
-  margin-top: 181px;
-}
-
 
 @media screen and (max-width: 800px) {
-  .register__form {
-    gap: 36px;
-    margin-top: 162px;
+  .register {
+    padding-top: 232px;
   }
 
-  .form__navigate__login {
-    margin-top: 182px;
+  .register__form {
+    gap: 40px;
   }
 
   .register__form-container {
-    margin-top: 5px;
-  }
-
-  .login {
-    height: 1028px;
   }
 }
 
 @media screen and (max-width: 500px) {
+  .register {
+    padding-top: 56px;
+  }
+
+  .register__navigate {
+    gap: 15px;
+    margin-top: 147px;
+  }
+
+  .register__navigate_type_login {
+    margin-top: 216px;
+  }
 
   .register__input {
-    width: 260px;
+    max-width: 260px;
     font-size: 14px;
     line-height: 17px;
   }
 
   .register__form {
-    width: 260px;
+    max-width: 260px;
     margin: 0;
-    gap: 46px;
+    gap: 50px;
     align-items: center;
   }
 
-  .prologinfile {
-    padding: 70px 30px 70px;
-  }
-
-  .form__navigate__login {
-    margin-top: 260px;
-    gap: 15px;
-  }
-
   .register__form-container {
-    margin-top: 35px;
+    margin-top: 30px;
   }
 
-  .login {
-    height: 780px;
-  }
-
-  .form__navigate__button {
-    width: 260px;
-    height: 45px;
-  }
-
-  .register__regestration {
+  .register__registration {
     font-size: 12px;
     line-height: 15px;
   }
@@ -233,8 +188,7 @@
     line-height: 15px;
   }
 
-
-  .login__container {
-    padding: 56px 30px 70px;
+  .register__response-error {
+    min-height: 28px;
   }
 }

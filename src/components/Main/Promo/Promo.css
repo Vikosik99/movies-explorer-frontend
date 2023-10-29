@@ -7,118 +7,47 @@
   min-width: 320px;
   max-width: 1280px;
   width: 100%;
-  height: 560px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 0;
-  padding-top: 50px;
+  background-image: url("../../../images/main-landing-logo.svg");
+  background-position: 488px 256px;
+  background-repeat: no-repeat;
 }
 
 .promo__text {
   margin: 0;
-  padding: 0;
+  padding: 50px 0 406px 70px;
   font-size: 40px;
   font-weight: 400;
   line-height: 52px;
   letter-spacing: -0.04em;
-  text-align: left;
   color: #FFFFFF;
-  width: 626px;
-  position: relative;
-  left: 70px;
-  top: 0px;
+  max-width: 626px;
 }
 
-.promo__img {
-  margin: 0;
-  padding: 0;
-  width: 722px;
-  height: 244px;
-  position: relative;
-  top: 100px;
-  right: -489px;
-}
-
-/*1250px*/
-
-@media screen and (max-width: 1250px) {
-  .promo__img {
-    right: -400px;
-  }
-}
-
-/*1180px*/
-
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 768px) {
   .promo__text {
-    left: 150px;
-  }
-
-}
-
-/*1160px*/
-
-@media screen and (max-width: 1160px) {
-
-  .promo__img {
-    right: -300px;
-  }
-}
-
-/*1060px*/
-
-@media screen and (max-width: 1060px) {
-  .promo__text {
-    left: 0px;
-    top: 0px;
-    width: 680px;
+    margin: 0 auto;
     text-align: center;
+    padding: 300px 0 440px;
   }
 
-  .promo__img {
-    left: 0px;
-    top: 0px;
-    width: 680px;
-    height: 230px;
-    margin-top: 140px;
-  }
 
   .promo__container {
-    width: 100%;
-    padding-top: 300px;
-    height: 844px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-position: center 544px;
+    background-size: 680px 230px;
   }
 }
 
-/*728px*/
-
-@media screen and (max-width: 728px) {
+@media screen and (max-width: 500px) {
   .promo__text {
     font-size: 31px;
     line-height: 39px;
-    width: 300px;
-  }
-
-  .promo__img {
-    width: 320px;
-    height: 230px;
-    margin-top: 60px;
+    max-width: 300px;
+    padding: 183px 0 330px;
   }
 
   .promo__container {
-    padding-top: 183px;
-    padding-bottom: 40px;
-    height: auto;
-  }
-}
-
-/*350px*/
-
-@media screen and (max-width: 350px) {
-  .promo__img {
-    object-fit: cover;
+    background-position: center 360px;
   }
 }

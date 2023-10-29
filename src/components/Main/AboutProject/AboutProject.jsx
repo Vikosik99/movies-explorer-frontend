@@ -6,8 +6,8 @@ export function AboutProject() {
       <div className="aboutProject__container">
         <h3 className="aboutProject__glava">О проекте</h3>
         <div className="aboutProject__text">
-          <h3 className="aboutProject__text-diplon">Дипломный проект включал 5 этапов</h3>
-          <h3 className="aboutProject__text-diplon aboutProject__text-diplon_description">На выполнение диплома ушло 5 недель</h3>
+          <h3 className="aboutProject__text-diploma">Дипломный проект включал 5 этапов</h3>
+          <h3 className="aboutProject__text-diploma aboutProject__text-diploma_description">На выполнение диплома ушло 5 недель</h3>
           <p className="aboutProject__text-about">Составление плана, работу над бэкендом, вёрстку, добавление функциональности и финальные доработки.</p>
           <p className="aboutProject__text-about aboutProject__text-about_description">У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.</p>
         </div>

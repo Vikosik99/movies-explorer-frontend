@@ -17,11 +17,23 @@ export function Profile({ handleLogout, setCurrentUser }) {
     setCurrentUser((prev) => ({ ...prev, name: values.name, email: values.email }));
     setIsSubmitVisible(false);
     setResponse({ type: "info", message: PROFILE_CHANGE_SUCCESS });
+    setIsValid(false);
   }
 
   function handleChangeInfo(e) {
     setIsSubmitVisible(true);
     setResponse({ type: "info", message: "" });
+  }
+
+  function handleProfileChange(e) {
+    handleChange(e);
+    const {name, value} = e.target
+    if ((name === "name" && value === currentUser.name) && (values["email"] === currentUser.email)) {
+      setIsValid(false);
+    }
+    if ((name === "email" && value === currentUser.email) && (values["name"] === currentUser.name)) {
+      setIsValid(false);
+    }
   }
 
   useEffect(() => {
@@ -46,7 +58,7 @@ export function Profile({ handleLogout, setCurrentUser }) {
                   minLength="2"
                   maxLength="30"
                   value={values["name"] || ""}
-                  onChange={handleChange}
+                  onChange={handleProfileChange}
                   disabled={!isSubmitVisible}
                 />
                 <span className="profile__input-error profile__input-error_name">{errors["name"]}</span>
@@ -61,7 +73,7 @@ export function Profile({ handleLogout, setCurrentUser }) {
                   minLength="8"
                   maxLength="30"
                   value={values["email"] || ""}
-                  onChange={handleChange}
+                  onChange={handleProfileChange}
                   disabled={!isSubmitVisible}
                 />
                 <span className="profile__input-error profile__input-error_email">{errors["email"]}</span>

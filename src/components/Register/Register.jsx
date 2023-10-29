@@ -21,7 +21,7 @@ export function Register({ setCurrentUser }) {
 
   return (
     <main className="register">
-      <section>
+      <section className="register__section">
         <form className="register__form" name="register" noValidate onSubmit={handleRegister}>
           <Logo />
           <h1 className="register__title">Добро пожаловать!</h1>
@@ -39,7 +39,7 @@ export function Register({ setCurrentUser }) {
                 value={values["name"] || ""}
                 onChange={handleChange}
               />
-              <span className="register__input-error register__input-error_name">{errors["name"]}</span>
+              <span className="register__input-error">{errors["name"]}</span>
             </div>
             <div className="register__inputs-container">
               <span className="register__span">E-mail</span>
@@ -75,7 +75,7 @@ export function Register({ setCurrentUser }) {
           <div className="register__navigate">
             <p className="register__response-error">{responseError}</p>
             <ButtonFormSubmit isValid={isValid} text="Зарегистрироваться" />
-            <span className="register__regestration">
+            <span className="register__registration">
               Уже зарегистрированы?
               <Link to='/signin' className="register__link">
                 Войти

@@ -15,10 +15,9 @@
 
 .footer__project {
   margin: auto;
-  padding: 0;
+  padding: 0 0 20px;
   box-sizing: border-box;
   border-bottom: solid 1px #424242;
-  padding-bottom: 19px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +29,7 @@
 
 .footer__text {
   margin: 0;
-  padding: 0;
+  padding: 20px 0 0;
   box-sizing: border-box;
   font-size: 13px;
   font-weight: 400;
@@ -39,7 +38,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
 }
 
 .footer__text-year {
@@ -48,7 +46,7 @@
   box-sizing: border-box;
 }
 
-.footer__linlks {
+.footer__links {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -78,24 +76,24 @@
 @media screen and (max-width: 1180px) {
   .footer__container {
     width: 100%;
-    padding: 59px 30px 20px;
+    padding: 79px 30px 20px;
   }
 }
 
 @media screen and (max-width: 728px) {
   .footer__container {
-    padding: 55px 10px 10px;
+    padding: 79px 10px 20px;
   }
 
   .footer__text {
     flex-direction: column-reverse;
     padding-top: 30px;
-    gap: 31px;
+    gap: 30px;
     font-size: 12px;
     line-height: 15px;
   }
 
-  .footer__linlks {
+  .footer__links {
     flex-direction: column;
     align-items: center;
     gap: 12px;
@@ -105,5 +103,6 @@
     color: #8B8B8B;
     font-size: 12px;
     line-height: 15px;
+    padding-bottom: 21px;
   }
 }
