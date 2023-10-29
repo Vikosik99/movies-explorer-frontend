@@ -1,0 +1,30 @@
+.navigate-button {
+  margin: 0;
+  padding: 13px 0 15px;
+  border-radius: 3px;
+  background: #4285F4;
+  color: #FFFFFF;
+  border: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  width: 100%;
+}
+
+.navigate-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.navigate-button_disabled {
+  color: #C2C2C2;
+  background-color: #F8F8F8;
+}
+
+@media screen and (max-width: 500px) {
+  .navigate-button {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 15px 0;
+  }
+}

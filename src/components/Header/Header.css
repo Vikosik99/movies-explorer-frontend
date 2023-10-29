@@ -1,0 +1,321 @@
+.header {
+  background-color: #073042;
+  width: 100%;
+}
+
+.header_theme_movies {
+  background: #202020;
+}
+
+.header__container {
+  min-width: 320px;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 18px 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__navigation {
+  margin: 0;
+  padding: 0 0 0 44px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.header__films {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__film-profile {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  border: none;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 13px;
+  padding-left: 11px;
+  color: #FFFFFF;
+}
+
+.header__profile-image {
+  margin: 3px 3px 3px 7px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50px;
+  background: #0F4157 url("../../images/header-icon-men.svg") no-repeat center;
+}
+
+.header__profile-image_theme_main {
+  background-color: #313131;
+}
+
+.header__film {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-align: right;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.header__film_active {
+  font-weight: 500;
+}
+
+.header__film:hover {
+  opacity: 0.7;
+}
+
+.header__burger {
+  display: none;
+}
+
+.header__close {
+  width: 22px;
+  height: 22px;
+}
+
+.header__button {
+  display: none;
+}
+
+.header__home {
+  display: none;
+}
+
+.header__menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+
+.header__notauthorization {
+  display: flex;
+  gap: 31px;
+  align-items: center;
+}
+
+.header__reg {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  background: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: right;
+}
+
+.header__reg:hover {
+  opacity: 0.7;
+}
+
+.header__come-in {
+  border: 0;
+  margin: 0;
+  padding: 8px 20px;
+  font: inherit;
+  background: #3DDC84;
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: center;
+  color: #000000;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.header__come-in:hover {
+  opacity: 0.8;
+}
+
+.header__account {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+
+.header__film-profile:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+.header__film-main {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header__menu_navigate {
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+  }
+
+  .header__film-main {
+    display: list-item;
+    padding-top: 159px;
+  }
+
+  .header__films {
+    width: 0;
+    padding: 0;
+    visibility: hidden;
+    position: fixed;
+    flex-direction: column;
+    gap: 28px;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    z-index: 5;
+  }
+
+  .header__films_active {
+    visibility: visible;
+    width: 520px;
+    transition: .2s ease-in-out;
+    background-color: #202020;
+    align-items: center;
+  }
+
+  .header__container {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .header__button {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent url("../../images/icon-buterbrod.svg") center;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    z-index: 10;
+  }
+
+  .header__button-close {
+    width: 22px;
+    height: 22px;
+    background-image: url("../../images/header-button-close.svg");
+    top: 27px;
+    right: 27px;
+  }
+
+  .header__film_active {
+    padding-bottom: 4px;
+    border-bottom: 2px solid #FFFFFF;
+  }
+
+  .header__film {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .header__account {
+    margin-bottom: 90px;
+    align-items: end;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header__film-main {
+    padding-top: 144px;
+  }
+
+  .header__account {
+    margin-bottom: 46px;
+  }
+
+  .header__films {
+    gap: 24px;
+  }
+
+  .header__button {
+    top: 15px;
+    right: 14px;
+    width: 40px;
+    height: 43px;
+    background-image: url("../../images/icon-buterbrod-mini.svg");
+  }
+
+  .header__button-close {
+    top: 8px;
+    right: 9px;
+  }
+
+  .header__container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .header__navigation {
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  .header__films_active {
+    width: 100%;
+  }
+
+  .header__come-in {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 5px 12px;
+  }
+
+  .header__reg {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+
+  .header__film_active {
+    padding-bottom: 8px;
+  }
+
+  .header__notauthorization {
+    gap: 14px;
+  }
+}

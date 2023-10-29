@@ -1,0 +1,196 @@
+.AboutMe {
+  background-color: #202020;
+  width: 100%;
+}
+
+.AboutMe__container {
+  min-width: 320px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 110px 70px 101px;
+  color: #FFFFFF;
+}
+
+.AboutMe__glava {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: #FFFFFF;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #DADADA;
+
+}
+
+.AboutMe__about {
+  margin: 67px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.AboutMe__text {
+  margin: 0;
+  padding: 0;
+  max-width: 600px;
+}
+
+.AboutMe__name {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 58px;
+  text-align: left;
+  letter-spacing: -0.04em;
+}
+
+.AboutMe__job {
+  margin: 18px 0 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  letter-spacing: 0;
+}
+
+.AboutMe__textMe {
+  padding: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  margin: 26px 0 0;
+  letter-spacing: 0;
+}
+
+.AboutMe__git {
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: left;
+  margin: 99px 0 0;
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  letter-spacing: 0;
+}
+
+.AboutMe__git:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.AboutMe__img {
+  margin: 0;
+  padding: 0;
+  width: 270px;
+  height: 327px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1180px) {
+  .AboutMe__container {
+    width: 100%;
+    padding: 90px 50px 0;
+  }
+
+  .AboutMe__textMe {
+    width: 364px;
+  }
+
+  .AboutMe__glava {
+    margin: 0;
+  }
+
+
+  .AboutMe__textMe {
+    font-size: 12px;
+    line-height: 18px;
+    width: 364px;
+    margin-top: 20px;
+  }
+
+  .AboutMe__name {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .AboutMe__job {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 16px;
+  }
+
+  .AboutMe__text {
+    max-width: 364px;
+  }
+
+  .AboutMe__git {
+    margin-top: 87px;
+  }
+
+  .AboutMe__img {
+    height: 307px;
+    width: 255px;
+  }
+}
+
+@media screen and (max-width: 728px) {
+  .AboutMe__container {
+    padding: 70px 14px;
+  }
+
+  .AboutMe__about {
+    flex-direction: column-reverse;
+    margin-top: 60px;
+    align-items: center;
+  }
+
+  .AboutMe__textMe {
+    width: 292px;
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 20px;
+  }
+
+  .AboutMe__name {
+    font-size: 30px;
+    line-height: 36px;
+    margin-top: 40px;
+  }
+
+  .AboutMe__job {
+    font-size: 11px;
+    line-height: 16px;
+    margin-top: 20px;
+  }
+
+  .AboutMe__text {
+    max-width: 292px;
+  }
+
+  .AboutMe__git {
+    margin-top: 40px;
+  }
+
+  .AboutMe__img {
+    height: 352px;
+    width: 292px;
+  }
+
+  .AboutMe__glava {
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 28px;
+  }
+}

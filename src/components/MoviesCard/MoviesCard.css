@@ -1,0 +1,115 @@
+.element {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.element__img {
+  width: 100%;
+  height: 151px;
+  box-sizing: border-box;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.element__like {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  background-position: center;
+}
+
+.element__like_type_dislike {
+  background-image: url(../../images/film-icon-like.svg);
+  background-color: #313131;
+}
+
+.element__like:hover {
+  opacity: 0.8;
+}
+
+.element__like_type_like {
+  background-image: url(../../images/film-icon-like-active.svg);
+  background-color: #313131;
+}
+
+.element:hover .element__like_type_delete {
+  background-image: url(../../images/film-icon-delete.svg);
+  background-color: #313131;
+}
+
+.element__like-text {
+  margin: 0;
+  padding: 6px 0 0;
+  font-weight: 400;
+  box-sizing: border-box;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: left;
+  color: #8B8B8B;
+  border-top: solid 1px #424242;
+}
+
+.element__container {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 10px 0 13px;
+  align-items: flex-start;
+}
+
+.element__text {
+  margin: 0;
+  padding: 4px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  min-height: 32px;
+  text-align: left;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1180px) {
+  .element__img {
+    height: 190px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .element__text {
+    font-size: 12px;
+    line-height: 15px;
+    min-height: 30px;
+    padding-top: 5px;
+  }
+
+  .element__img {
+    height: 168px;
+  }
+
+  .element__container {
+    padding-bottom: 14px;
+  }
+
+  .element__like-text {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .element__like_type_delete {
+    background-image: url(../../images/film-icon-delete.svg);
+    background-color: #313131;
+  }
+}
