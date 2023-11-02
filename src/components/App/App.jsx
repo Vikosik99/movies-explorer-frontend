@@ -25,6 +25,7 @@ export function App() {
   function handleLogout() {
     setCurrentUser(() => ({name: "", email: "", isLoggedIn: false}));
     localStorage.clear();
+    setSourceMovies([]);
     setSavedMovies([]);
     navigate("/", {replace: true});
   }
