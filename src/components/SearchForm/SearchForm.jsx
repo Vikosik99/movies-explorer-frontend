@@ -1,21 +1,29 @@
 import "./SearchForm.css"
 import search from "../../images/film-icon-lupa.svg"
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 export function SearchForm({inputValue, isShort, onSearch, onShort, onChange}) {
   const [isFormDisabled, setIsFormDisabled] = useState(false);
-  const [isKeyWordPresent, setIsKeyWordPresent] = useState(false);
+  const [isKeyWordAbsent, setIsKeyWordAbsent] = useState(false);
+  const {pathname} = useLocation();
+
+  useEffect(() => setIsKeyWordAbsent(false), [inputValue]);
 
   function handleCheckbox(e) {
     setIsFormDisabled(() => true);
-    onShort(e);
+    if (pathname === "/saved-movies") {
+      onShort(e);
+    } else {
+      inputValue.trim() ? onShort(e) : setIsKeyWordAbsent(false);
+    }
     setIsFormDisabled(() => false);
   }
 
   function handleSubmit(e) {
     e.preventDefault();
     setIsFormDisabled(() => true);
-    onSearch();
+    inputValue.trim() ? onSearch(inputValue, isShort) : setIsKeyWordAbsent(true);
     setIsFormDisabled(() => false);
   }
 
@@ -56,6 +64,7 @@ export function SearchForm({inputValue, isShort, onSearch, onShort, onChange}) {
             <span className="SearchForm__flashFilm">Короткометражки</span>
           </label>
         </div>
+        {isKeyWordAbsent && <p className="error-text">Нужно ввести ключевое слово</p>}
         <div className="SearchForm__line" />
       </form>
     </div>

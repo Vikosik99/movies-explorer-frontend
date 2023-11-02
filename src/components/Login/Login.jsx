@@ -3,16 +3,31 @@ import useFormAndValidation from "../../hooks/useFormAndValidation";
 import { Logo } from "../Logo/Logo";
 import { ButtonFormSubmit } from "../ButtonFormSubmit/ButtonFormSubmit";
 import { useState } from "react";
+import { responseErrorHandler } from "../../utils/utils";
+import { EMAIL_REGEX_STR, LOGIN_ERROR } from "../../utils/constants";
+import mainApi from "../../utils/MainApi";
 
-export function Login({setCurrentUser}) {
+export function Login({setCurrentUser, setSavedMovies}) {
   const {values, handleChange, errors, isValid, setIsValid} = useFormAndValidation();
   const navigate = useNavigate();
   const [responseError, setResponseError] = useState("");
 
-  function handleLogin(e) {
+  async function handleLogin(e) {
     e.preventDefault();
-    setCurrentUser((prev) => ({...prev, email: values.email, isLoggedIn: true}))
-    navigate("/movies", {replace: true});
+    setIsValid(false);
+    try {
+      const {token} = await mainApi.login(values.email, values.password);
+      localStorage.setItem("jwt", token)
+      const {name, email} = await mainApi.getUserInfo();
+      setCurrentUser((prev) => ({...prev, name, email, isLoggedIn: true}));
+      const savedCards = await mainApi.getCards();
+      setSavedMovies(savedCards);
+      navigate("/movies", {replace: true});
+    } catch (error) {
+      console.log(error);
+      const msg = responseErrorHandler(error.status, LOGIN_ERROR)
+      setResponseError(msg);
+    }
   }
 
   return (
@@ -34,6 +49,7 @@ export function Login({setCurrentUser}) {
                 placeholder="E-mail"
                 minLength="8"
                 maxLength="30"
+                pattern={EMAIL_REGEX_STR}
               />
               <span className="register__input-error">{errors["email"]}</span>
             </div>

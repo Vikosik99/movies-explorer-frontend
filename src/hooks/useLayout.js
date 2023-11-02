@@ -13,17 +13,18 @@ import {
   TABLET_WIDTH
 } from "../utils/constants";
 
-export function useLayout(moviesListLength) {
+export function useLayout() {
+  const [moviesArray, setMoviesArray] = useState([]);
   const [movieRenderCounter, setMovieRenderCounter] = useState(0);
   const [isButtonPresent, setIsButtonPresent] = useState(false);
-  const [moviesCounterObject, setMoviesCounterObject] = useState({initial: DESKTOP_INIT, more: DESKTOP_MORE, saved:3});
+  const [moviesCounterObject, setMoviesCounterObject] = useState({initial: DESKTOP_INIT, more: DESKTOP_MORE});
 
   function handleMore() {
     const newMovieCounter = movieRenderCounter + moviesCounterObject.more;
-    if (moviesListLength > newMovieCounter) {
+    if (moviesArray.length > newMovieCounter) {
       setIsButtonPresent(true);
       setMovieRenderCounter(newMovieCounter);
-    } else if (moviesListLength > movieRenderCounter) {
+    } else if (moviesArray.length > movieRenderCounter) {
       setIsButtonPresent(false);
       setMovieRenderCounter(newMovieCounter);
     } else {
@@ -33,13 +34,13 @@ export function useLayout(moviesListLength) {
 
   const handleScreen = () => {
     if (window.innerWidth < TABLET_WIDTH) {
-      setMoviesCounterObject({initial: MOBILE_INIT, more: MOBILE_MORE, saved:2});
+      setMoviesCounterObject({initial: MOBILE_INIT, more: MOBILE_MORE});
     } else if (window.innerWidth >= TABLET_WIDTH && window.innerWidth < LAPTOP_WIDTH) {
-      setMoviesCounterObject({initial: TABLET_INIT, more: TABLET_MORE, saved:3});
+      setMoviesCounterObject({initial: TABLET_INIT, more: TABLET_MORE});
     } else if (window.innerWidth >= LAPTOP_WIDTH && window.innerWidth < DESKTOP_WIDTH) {
-      setMoviesCounterObject({initial: LAPTOP_INIT, more: LAPTOP_MORE, saved:3});
+      setMoviesCounterObject({initial: LAPTOP_INIT, more: LAPTOP_MORE});
     } else {
-      setMoviesCounterObject({initial: DESKTOP_INIT, more: DESKTOP_MORE, saved:3});
+      setMoviesCounterObject({initial: DESKTOP_INIT, more: DESKTOP_MORE});
     }
   }
 
@@ -53,8 +54,10 @@ export function useLayout(moviesListLength) {
 
   useEffect(() => {
     setMovieRenderCounter(moviesCounterObject.initial);
-    setIsButtonPresent(moviesListLength > moviesCounterObject.initial);
+    setIsButtonPresent(moviesArray.length > moviesCounterObject.initial);
   }, [moviesCounterObject.initial])
 
-  return {movieRenderCounter, isButtonPresent, handleMore, moviesCounterObject}
+  useEffect(() => setIsButtonPresent(moviesArray.length > moviesCounterObject.initial), [moviesArray.length])
+
+  return {movieRenderCounter, isButtonPresent, handleMore, moviesCounterObject, moviesArray, setMoviesArray}
 }

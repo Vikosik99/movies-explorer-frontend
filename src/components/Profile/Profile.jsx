@@ -4,25 +4,34 @@ import { useContext, useEffect, useState } from "react";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import useFormAndValidation from "../../hooks/useFormAndValidation";
 import { ButtonFormSubmit } from "../ButtonFormSubmit/ButtonFormSubmit";
-import { PROFILE_CHANGE_SUCCESS } from "../../utils/constants";
+import { EMAIL_REGEX, EMAIL_REGEX_STR, PROFILE_CHANGE_SUCCESS, PROFILE_ERROR } from "../../utils/constants";
+import { responseErrorHandler } from "../../utils/utils";
+import mainApi from "../../utils/MainApi";
 
-export function Profile({ handleLogout, setCurrentUser }) {
+export function Profile({handleLogout, setCurrentUser}) {
   const currentUser = useContext(CurrentUserContext);
-  const { values, handleChange, errors, isValid, setIsValid, setValues } = useFormAndValidation();
+  const {values, handleChange, errors, isValid, setIsValid, setValues} = useFormAndValidation();
   const [isSubmitVisible, setIsSubmitVisible] = useState(false);
-  const [response, setResponse] = useState({ type: "", message: "" });
+  const [response, setResponse] = useState({type: "", message: ""});
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    setCurrentUser((prev) => ({ ...prev, name: values.name, email: values.email }));
-    setIsSubmitVisible(false);
-    setResponse({ type: "info", message: PROFILE_CHANGE_SUCCESS });
     setIsValid(false);
+    try {
+      await mainApi.setUserInfo(values.name, values.email);
+      setCurrentUser((prev) => ({...prev, name: values.name, email: values.email}));
+      setIsSubmitVisible(false);
+      setResponse({type: "info", message: PROFILE_CHANGE_SUCCESS});
+    } catch (error) {
+      console.log(error)
+      const msg = responseErrorHandler(error.status, PROFILE_ERROR);
+      setResponse({type: "error", message: msg})
+    }
   }
 
   function handleChangeInfo(e) {
     setIsSubmitVisible(true);
-    setResponse({ type: "info", message: "" });
+    setResponse({type: "info", message: ""});
   }
 
   function handleProfileChange(e) {
@@ -37,7 +46,7 @@ export function Profile({ handleLogout, setCurrentUser }) {
   }
 
   useEffect(() => {
-    setValues({ name: currentUser.name, email: currentUser.email });
+    setValues({name: currentUser.name, email: currentUser.email});
   }, [currentUser.email, currentUser.name])
 
   return (
@@ -75,6 +84,7 @@ export function Profile({ handleLogout, setCurrentUser }) {
                   value={values["email"] || ""}
                   onChange={handleProfileChange}
                   disabled={!isSubmitVisible}
+                  pattern={EMAIL_REGEX_STR}
                 />
                 <span className="profile__input-error profile__input-error_email">{errors["email"]}</span>
               </div>

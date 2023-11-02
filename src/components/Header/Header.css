@@ -280,8 +280,11 @@
   }
 
   .header__button-close {
-    top: 8px;
-    right: 9px;
+    top: 18px;
+    right: 18px;
+    background-image: url("../../images/header-button-close.svg");
+    width: 22px;
+    height: 22px;
   }
 
   .header__container {
