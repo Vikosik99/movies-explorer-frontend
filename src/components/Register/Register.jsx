@@ -3,20 +3,32 @@ import { Link, useNavigate } from "react-router-dom";
 import useFormAndValidation from "../../hooks/useFormAndValidation";
 import { Logo } from "../Logo/Logo";
 import { useState } from "react";
-import { REGISTRATION_ERROR } from "../../utils/constants";
+import { EMAIL_REGEX_STR, REGISTRATION_ERROR } from "../../utils/constants";
 import { ButtonFormSubmit } from "../ButtonFormSubmit/ButtonFormSubmit";
+import mainApi from "../../utils/MainApi";
+import { responseErrorHandler } from "../../utils/utils";
 
 
-export function Register({ setCurrentUser }) {
-  const { values, handleChange, errors, isValid, setIsValid } = useFormAndValidation();
+export function Register({setCurrentUser}) {
+  const {values, handleChange, errors, isValid, setIsValid} = useFormAndValidation();
   const navigate = useNavigate();
   const [responseError, setResponseError] = useState("");
 
-  function handleRegister(e) {
+  async function handleRegister(e) {
     e.preventDefault();
-    setResponseError(REGISTRATION_ERROR);
-    // setCurrentUser(() => ({name: values.name, email: values.email, isLoggedIn: true}))
-    // navigate("/movies", {replace: true});
+    setIsValid(false);
+    try {
+      await mainApi.register(values.name, values.email, values.password);
+      const {token} = await mainApi.login(values.email, values.password);
+      localStorage.setItem("jwt", token);
+      const {name, email} = await mainApi.getUserInfo();
+      setCurrentUser((prev) => ({...prev, name, email, isLoggedIn: true}));
+      navigate("/movies", {replace: true});
+    } catch (error) {
+      console.log(error);
+      const msg = responseErrorHandler(error.status, REGISTRATION_ERROR)
+      setResponseError(msg);
+    }
   }
 
   return (
@@ -53,6 +65,7 @@ export function Register({ setCurrentUser }) {
                 placeholder="E-mail"
                 minLength="8"
                 maxLength="30"
+                pattern={EMAIL_REGEX_STR}
               />
               <span className="register__input-error register__input-error_email">{errors["email"]}</span>
             </div>
