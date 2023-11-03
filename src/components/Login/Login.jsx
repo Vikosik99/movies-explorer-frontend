@@ -20,9 +20,9 @@ export function Login({setCurrentUser, setSavedMovies}) {
       localStorage.setItem("jwt", token)
       const {name, email} = await mainApi.getUserInfo();
       setCurrentUser((prev) => ({...prev, name, email, isLoggedIn: true}));
+      navigate("/movies", {replace: true});
       const savedCards = await mainApi.getCards();
       setSavedMovies(savedCards);
-      navigate("/movies", {replace: true});
     } catch (error) {
       console.log(error);
       const msg = responseErrorHandler(error.status, LOGIN_ERROR)
